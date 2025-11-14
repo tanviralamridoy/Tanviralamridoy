@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Tanvir Alam| Developer × Gamer × Creator × Geographer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+   <div class="nav-container">
+  <div class="nav-logo">
+    <a href="#home">Tanvir<span>Alam</span></a>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+
+  <!-- এখানে লগইন বাটন -->
+  <div class="auth-status" id="auth-status"></div>
+
+  <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="gradient-text">Tanvir Alam Hridoy</span>
+        </h1>
+        <p class="hero-subtitle">Full-Stack Developer | Gaming Enthusiast | Content Creator | Geography Explorer</p>
+        <p class="hero-desc">
+          I build immersive web experiences, stream epic gaming sessions, create viral content, and explore the world's wonders — all while pushing the limits of code and creativity.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="globe-glow"></div>
+        <div class="code-lines">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <i class="fas fa-code"></i>
+          <h3>Developer</h3>
+          <p>Crafting responsive, high-performance web apps with clean code and modern architecture.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-gamepad"></i>
+          <h3>Gamer</h3>
+          <p>Competitive player & speedrunner. From FPS to RPGs — I live for the grind and the glory.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-video"></i>
+          <h3>Content Creator</h3>
+          <p>Streaming on Twitch, editing cinematic montages, and growing a global community.</p>
+        </div>
+        <div class="about-card">
+          <i class="fas fa-globe"></i>
+          <h3>Geography Lover</h3>
+          <p>Mapping virtual worlds, exploring real ones. GeoGuessr pro & armchair cartographer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div id="projects-grid" class="projects-grid">
+        <!-- Projects loaded dynamically -->
+      </div>
+      <div id="no-projects" class="no-data">
+        <p>No projects yet. Check back soon!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Social -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+1 (555) 123-4567</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>Tamvir.Alam.dev@gmail.com</span>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-icon" data-platform="youtube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" data-platform="twitch"><i class="fab fa-twitch"></i></a>
+            <a href="#" class="social-icon" data-platform="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" data-platform="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" data-platform="github"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon" data-platform="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon" data-platform="discord"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Tanvir Alam Hridoy. Built with 💻 + 🎮 + 🌍</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+<!-- ইউজার লগইন মডাল -->
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 style="color:#00d4ff; margin:0;">লগইন করুন</h2>
+      <span class="close" style="font-size:24px; cursor:pointer;">×</span>
+    </div>
+    <form id="user-login-form" style="padding:20px;">
+      <div class="form-group">
+        <label style="color:#ccc;">ইমেইল</label>
+        <input type="email" id="user-email" placeholder="tanvir@example.com" required 
+               style="width:100%; padding:12px; background:#16213e; border:1px solid #00d4ff; border-radius:8px; color:white; margin-top:5px;">
+      </div>
+      <div class="form-group">
+        <label style="color:#ccc;">পাসওয়ার্ড</label>
+        <input type="password" id="user-pass" placeholder="123456" required 
+               style="width:100%; padding:12px; background:#16213e; border:1px solid #00d4ff; border-radius:8px; color:white; margin-top:5px;">
+      </div>
+      <div id="login-error" style="color:red; font-size:14px; margin:10px 0; min-height:20px;"></div>
+      <button type="submit" class="btn-primary" 
+              style="width:100%; padding:12px; background:#00d4ff; color:black; border:none; border-radius:8px; font-weight:bold;">
+        লগইন করুন
+      </button>
+    </form>
+  </div>
+</div>
+<script>
+  // URL Parameter চেক করো
+  const urlParams = new URLSearchParams(window.location.search);
+  const adminMode = urlParams.get('admin');
+  const dashboardMode = urlParams.get('dashboard');
+
+  // যদি ?admin থাকে → Admin Login পেজে যাও
+  if (adminMode === 'login' || adminMode === 'true') {
+    window.location.href = 'admin.html';
+  }
+
+  // যদি ?dashboard থাকে → সরাসরি Dashboard (লগইন চেক সহ)
+  else if (dashboardMode === 'true') {
+    // চেক করো লগইন আছে কি না
+    if (localStorage.getItem('adminLoggedIn') === 'true') {
+      window.location.href = 'dashboard.html';
+    } else {
+      window.location.href = 'admin.html';
+    }
+  }
+</script>
+</body>
+</html>

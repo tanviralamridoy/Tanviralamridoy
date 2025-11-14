@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard | Tanvir Alam</title>
+  <link rel="stylesheet" href="css/admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="dashboard-container">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+      <div class="header-left">
+        <h1>Admin Panel</h1>
+        <span class="status-indicator">Online</span>
+      </div>
+      <button id="logout-btn" class="logout-btn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </header>
+
+    <!-- Tabs -->
+    <div class="dashboard-tabs">
+      <button class="tab-btn active" data-tab="projects">Projects</button>
+      <button class="tab-btn" data-tab="content">Content</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
+      <!-- Tabs এর ভিতরে -->
+<button class="tab-btn" data-tab="users">Users</button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+
+      <!-- Projects Tab -->
+      <section id="projects" class="tab-content active">
+        <div class="section-header">
+          <h2>Manage Projects</h2>
+          <button id="add-project-btn" class="btn-primary">
+            <i class="fas fa-plus"></i> Add Project
+          </button>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+          <!-- Projects will be loaded here -->
+        </div>
+        <div id="no-projects-msg" class="no-data">No projects found.</div>
+      </section>
+
+      <!-- Content Tab -->
+      <section id="content" class="tab-content">
+        <div class="section-header">
+          <h2>Website Content</h2>
+        </div>
+        <div class="content-controls">
+          <div class="control-item">
+            <label>Hero Title</label>
+            <input type="text" id="hero-title" placeholder="Tanvir Alam Hridoy" />
+          </div>
+          <div class="control-item">
+            <label>Hero Subtitle</label>
+            <input type="text" id="hero-subtitle" placeholder="Full-Stack Developer..." />
+          </div>
+          <button class="btn-primary">Save Changes</button>
+        </div>
+      </section>
+
+      <!-- Settings Tab -->
+      <section id="settings" class="tab-content">
+        <div class="section-header">
+          <h2>Admin Settings</h2>
+        </div>
+        <div class="settings-grid">
+          <div class="setting-card">
+            <h3>Change Admin Password</h3>
+            <input type="password" placeholder="New Password" />
+            <button class="btn-small">Update</button>
+          </div>
+          <div class="setting-card">
+            <h3>Clear Cache</h3>
+            <button class="btn-danger">Clear All Data</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Add/Edit Project Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Add New Project</h2>
+        <span class="close">×</span>
+      </div>
+      <form id="project-form">
+        <input type="hidden" id="project-id" />
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Title *</label>
+            <input type="text" id="project-title" required />
+          </div>
+          <div class="form-group">
+            <label>Description *</label>
+            <textarea id="project-desc" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Thumbnail URL *</label>
+            <input type="url" id="project-thumb" required />
+          </div>
+          <div class="form-group">
+            <label>Live Link</label>
+            <input type="url" id="project-live" />
+          </div>
+          <div class="form-group">
+            <label>GitHub Link</label>
+            <input type="url" id="project-github" />
+          </div>
+          <div class="form-group">
+            <label>Tags (comma separated)</label>
+            <input type="text" id="project-tags" placeholder="JS, React, API" />
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="project-private" /> Private Project
+            </label>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary">Save</button>
+          <button type="button" class="btn-secondary" id="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+  <!-- dashboard.html এর <main> এর ভিতরে এই ট্যাব যোগ করো -->
+
+<!-- User Management Tab -->
+<section id="users" class="tab-content">
+  <div class="section-header">
+    <h2>Manage Users</h2>
+    <button id="add-user-btn" class="btn-primary">
+      <i class="fas fa-user-plus"></i> Add User
+    </button>
+  </div>
+
+  <div class="projects-grid" id="users-container">
+    <!-- Users will load here -->
+  </div>
+  <div id="no-users-msg" class="no-data">No users found.</div>
+</section>
+</body>
+</html>
